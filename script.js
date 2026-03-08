@@ -1,14 +1,14 @@
 // ── Dados das fotos ──────────────────────────
 const fotos = [
-  { src: "imagem01.png", legenda: "Foto 1 💕" },
-  { src: "imagem02.png", legenda: "Foto 2 🌸" },
-  { src: "imagem03.png", legenda: "Foto 3 ✨" },
-  { src: "imagem04.png", legenda: "Foto 4 💖" },
-  { src: "imagem05.png", legenda: "Foto 5 🌷" },
-  { src: "imagem06.png", legenda: "Foto 6 🥰" },
-  { src: "imagem07.png", legenda: "Foto 7 💜" },
-  { src: "imagem08.png", legenda: "Foto 8 🎀" },
-  { src: "imagem09.png", legenda: "Foto 9 🌟" },
+  { src: "imagem01.jpg", legenda: "Foto 1 💕" },
+  { src: "imagem02.jpg", legenda: "Foto 2 🌸" },
+  { src: "imagem03.jpg", legenda: "Foto 3 ✨" },
+  { src: "imagem04.jpg", legenda: "Foto 4 💖" },
+  { src: "imagem05.jpg", legenda: "Foto 5 🌷" },
+  { src: "imagem06.jpg", legenda: "Foto 6 🥰" },
+  { src: "imagem07.jpg", legenda: "Foto 7 💜" },
+  { src: "imagem08.jpg", legenda: "Foto 8 🎀" },
+  { src: "imagem09.jpg", legenda: "Foto 9 🌟" },
 ];
 
 // ── Memes textuais (sem imagem externa) ──────

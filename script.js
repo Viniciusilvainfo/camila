@@ -181,7 +181,7 @@ function responderQuiz(tipo) {
   const resultado = document.getElementById("quiz-resultado");
   resultado.classList.remove("hidden");
   if (tipo === "certo") {
-    resultado.textContent = "🎉 CORRETO! OFF THE CHARTS! Nem os instrumentos conseguem medir! kkk";
+    resultado.textContent = "🎉 CORRETO! >DEUSAAA! Nem os instrumentos conseguem medir! kkk";
     dispararConfetti(60);
   } else {
     resultado.textContent = "❌ ERRADO! Vai lá e tenta de novo… (dica: a última opção não existe kkkk)";

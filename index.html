@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila Ferreira de Souza 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CONFETTI CANVAS -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- LANDING PAGE -->
+  <section id="landing">
+    <div class="landing-content">
+      <div class="emoji-float">🌸</div>
+      <h1 class="title">Feliz Dia Internacional<br/>da Mulher!</h1>
+      <h2 class="subtitle">Camila Ferreira de Souza</h2>
+      <p class="landing-desc">08 de Março de 2026 💖</p>
+      <button id="btn-entrar" onclick="entrar()">
+        Abrir meu presente 🎁
+      </button>
+      <p class="hint">(psst… clique no presente antes que ele some kkk)</p>
+    </div>
+    <div class="coracao-flutuante" id="coracao-easter">❤️</div>
+  </section>
+
+  <!-- MAIN ALBUM -->
+  <section id="album" class="hidden">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <span class="header-emoji">📸</span>
+        <h1>Álbum da Mila 💕</h1>
+        <span class="header-emoji">🌷</span>
+      </div>
+      <p class="header-sub">Clica nas fotos, nas estrelinhas, em tudo! Tem surpresa 👀</p>
+    </header>
+
+    <!-- MEME BANNER -->
+    <div class="meme-banner" id="meme-banner" onclick="trocarMeme()">
+      <span id="meme-texto">💅 Clica aqui pra ver um meme sobre a Mila</span>
+    </div>
+
+    <!-- GALERIA -->
+    <div class="galeria-titulo">
+      <h2>📷 Nossa Galeria</h2>
+      <p>Clica nas fotos para ver em tamanho maior ✨</p>
+    </div>
+
+    <div class="galeria" id="galeria"></div>
+
+    <!-- MENSAGEM SECRETA -->
+    <div class="mensagem-box">
+      <h2>Você encontrou a mensagem secreta! 🤫</h2>
+      <p id="msg-secreta-texto">Clica no botão abaixo pra revelar 👇</p>
+      <button class="btn-mensagem" onclick="revelarMensagem()">Revelar 💌</button>
+      <div id="mensagem-revealed" class="hidden">
+        <p class="mensagem-texto">
+          Mila, você é a pessoa mais incrível que eu já conheci.<br/><br/>
+          Hoje, no Dia Internacional da Mulher, quero te lembrar o quanto você é forte,
+          linda, engraçada e especial para mim. 💕<br/><br/>
+          Obrigado por existir na minha vida. Te amo muito!
+        </p>
+        <div class="emoji-chuva" id="emoji-chuva"></div>
+      </div>
+    </div>
+
+    <!-- MEME QUIZ -->
+    <div class="quiz-box">
+      <h2>🧠 Quiz da Mila</h2>
+      <p id="quiz-pergunta">Qual é o nível de perfeição da Mila?</p>
+      <div class="quiz-opcoes" id="quiz-opcoes">
+        <button onclick="responderQuiz('errado')">Alta 📈</button>
+        <button onclick="responderQuiz('errado')">Muito alta 🚀</button>
+        <button onclick="responderQuiz('certo')">OFF THE CHARTS 📊💥</button>
+        <button onclick="responderQuiz('errado')">É só humana né</button>
+      </div>
+      <p id="quiz-resultado" class="hidden"></p>
+    </div>
+
+    <!-- BOTAO SURPRESA -->
+    <div class="surpresa-box">
+      <h2>🎉 Botão da Surpresa</h2>
+      <p>Não clica... sério, não clica.</p>
+      <button class="btn-surpresa" id="btn-surpresa" onclick="surpresa()">NÃO CLICA AQUI 🚫</button>
+    </div>
+
+    <!-- RATING -->
+    <div class="rating-box">
+      <h2>⭐ Avalie a Mila</h2>
+      <p>Arrasta as estrelas para dar uma nota (spoiler: tem só uma opção válida)</p>
+      <div class="estrelas" id="estrelas">
+        <span class="estrela" data-val="1" onclick="avaliar(1)">⭐</span>
+        <span class="estrela" data-val="2" onclick="avaliar(2)">⭐</span>
+        <span class="estrela" data-val="3" onclick="avaliar(3)">⭐</span>
+        <span class="estrela" data-val="4" onclick="avaliar(4)">⭐</span>
+        <span class="estrela" data-val="5" onclick="avaliar(5)">⭐</span>
+      </div>
+      <p id="rating-resultado"></p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Feito com muito amor 💖 | 08/03/2026</p>
+      <p class="footer-small">e com um pouco de JavaScript kkkk</p>
+    </footer>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="hidden" onclick="fecharLightbox()">
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="fecharLightbox()">✕</button>
+      <button class="lightbox-nav left" onclick="navLightbox(-1)">‹</button>
+      <img id="lightbox-img" src="" alt="foto" />
+      <button class="lightbox-nav right" onclick="navLightbox(1)">›</button>
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- MEME POPUP -->
+  <div id="meme-popup" class="hidden" onclick="fecharPopup()">
+    <div class="popup-inner" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="fecharPopup()">✕</button>
+      <img id="popup-img" src="" alt="meme" />
+      <p id="popup-texto"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
